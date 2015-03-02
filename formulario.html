@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Enter names in the fields, then click "Submit" to submit the form:</p>
+
+<form id="frm1" action="form_action.asp">
+First name: <input type="text" name="fname"><br>
+Last name: <input type="text" name="lname"><br><br>
+<input type="button" onclick="enviar()" value="Submit">
+<input type="button" onclick="resetear()" value="Reset">
+</form>
+
+<script>
+function enviar() {
+    document.getElementById("frm1").submit();
+}
+</script>
+
+<script>
+function resetear() {
+    document.getElementById("frm1").reset();
+}
+</script>
+
+</body>
+</html>
