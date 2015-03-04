@@ -7,18 +7,18 @@
         <p>Enter names in the fields, then click "Submit" to submit the form:</p>
         
         <form id="myForm" action="form_action.asp" onsubmit="return validateForm()">
-            First name: <input type="text" name="fname" required><br>
-            Last name: <input type="text" name="lname" required><br><br>
+            Nombre: <input type="text" name="fname" required><br>
+            Apellido: <input type="text" name="lname" required><br>
+            Edad: <input type="number" name="age" required><br><br>
             <input type="submit" onclick="enviar()" value="Submit">
             <input type="reset" value="Reset">
         </form>
         
         <script>
             function validateForm() {
-                var x = document.forms["myForm"]["fname"].value;
-                var y = document.forms["myForm"]["lname"].value;
-                if (x == null || x == "" && y == null || y == "") {
-                    alert("Name must be filled out");
+                var edad = document.forms["myForm"]["age"].value;
+                if (edad<18) {
+                    alert("Edad no valida");
                     return false;
                 }
             }
