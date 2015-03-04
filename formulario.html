@@ -16,7 +16,8 @@
         <script>
             function validateForm() {
                 var x = document.forms["myForm"]["fname"].value;
-                if (x == null || x == "") {
+                var y = document.forms["myForm"]["lname"].value;
+                if (x == null || x == "" && y == null || y == "") {
                     alert("Name must be filled out");
                     return false;
                 }
